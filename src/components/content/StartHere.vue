@@ -38,6 +38,9 @@
         />
       </div>
     </v-col>
+    <v-row class="custom-container-row-2">
+      <p><i>"Seja o autor da sua própria história, escreva cada capítulo com coragem e determinação, e transforme desafios em oportunidades para criar um enredo de sucesso. — Desconhecido"</i></p>
+    </v-row>
   </v-row>
 </template>
     
@@ -66,7 +69,7 @@ a {
 }
 
 .custom-info h2 {
-  font-size: 2.2rem; /* Tamanho da fonte padrão */
+  font-size: 2rem; /* Tamanho da fonte padrão */
 }
 
 .custom-buttons .v-btn {
@@ -75,11 +78,10 @@ a {
 
 .image-container {
   position: relative;
-  margin-top: 28px;
 }
 
 .main-image {
-  width: 80%;
+  width: 75%;
   height: auto; /* Mantém a proporção da imagem */
   border-radius: 50px;
 }
@@ -97,10 +99,49 @@ span {
   color: var(--red);
 }
 
+.custom-container-row-2 {
+    width: 65%;
+    height: 3.5%;
+    background-color: rgba(252, 191, 73, 0.6); /* Fundo amarelo com transparência */
+    position: absolute;
+    top: 23%; /* Ajusta para que a linha 2 fique parcialmente sobre a linha 1 */
+    left: 15%;
+    z-index: 2;
+    padding: 20px; /* Adiciona preenchimento para tornar a linha 2 visível */
+    border-radius: 20px;
+  }
+
+  .custom-container-row-2 p {
+    padding: 5px;
+    font-size: 15px;
+  }
+
 /* Media Query para telas maiores */
-@media (min-width: 1280px) {
+@media (min-width: 1400px) {
+  .image-container {
+    position: relative;
+    margin-top: 28px;
+  }
+
   .custom-info h2 {
-    font-size: 3.5rem; /* Aumenta o tamanho da fonte em telas maiores */
+    font-size: 3.8rem; /* Aumenta o tamanho da fonte em telas maiores */
+  }
+
+  .custom-container-row-2 {
+    width: 65%;
+    height: 4%;
+    background-color: rgba(252, 191, 73, 0.6); /* Fundo amarelo com transparência */
+    position: absolute;
+    top: 20%; /* Ajusta para que a linha 2 fique parcialmente sobre a linha 1 */
+    left: 15%;
+    z-index: 2;
+    padding: 20px; /* Adiciona preenchimento para tornar a linha 2 visível */
+    border-radius: 20px;
+  }
+
+  .custom-container-row-2 p {
+    padding: 20px;
+    font-size: 20px;
   }
 }
 </style>

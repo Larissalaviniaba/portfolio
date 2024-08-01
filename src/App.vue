@@ -48,7 +48,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 12px 12px 0 12px;
+  /* padding: 12px 12px 0 12px; */
 }
 .custom-container-start,
 .custom-container-about,
