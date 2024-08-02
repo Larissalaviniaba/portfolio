@@ -14,9 +14,10 @@
     --red: #D62828;
     --redHover: #FF9898;
     --green: #67E2AE;
-    --yellow: #FCBF49;
+    --yellow: rgba(252, 191, 73, 0.6);
 }
 
 body {
+    overflow: hidden;
     font-family: 'Epilogue', sans-serif;
 }

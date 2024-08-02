@@ -21,7 +21,7 @@ const customColors = {
   red: '#D62828',
   redHover: '#FF9898',
   green: '#67E2AE',
-  yellow: '#F1C40F',
+  yellow: 'rgba(252, 191, 73, 0.5)',
 }
 
 export default createVuetify({
@@ -34,6 +34,7 @@ export default createVuetify({
           textPrimary: customColors.black,
           textSecondary: customColors.mediumGrey,
           menu: customColors.red,
+          yellow: customColors.yellow
         },
       },
       dark:{
@@ -43,6 +44,7 @@ export default createVuetify({
           textPrimary: customColors.white,
           textSecondary: customColors.mediumGrey,
           menu: customColors.white,
+          yellow: customColors.yellow
         },
       }
     }
