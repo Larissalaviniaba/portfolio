@@ -26,7 +26,7 @@ export default defineConfig({
       },
     }),
   ],
-  define: { 'process.env': {} },
+  define: { 'process.env': {"EMAIL": "afa78da1aadc88bc742bb308d11377bd"} },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

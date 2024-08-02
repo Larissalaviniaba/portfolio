@@ -1,6 +1,6 @@
 <template>
   <v-footer height="80" class="bg-red">
-  <P>Desenvolvido com 💛 por <b>Larissa Lavínia</b></P>
+  <p>Desenvolvido com 💛 por <b>Larissa Lavínia</b></p>
   <p>
     <v-icon size="15" icon="mdi-copyright"/> 2024 | Larissa Lavínia | todos osdireitos reservados
   </p>
