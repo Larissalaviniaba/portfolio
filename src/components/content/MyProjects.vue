@@ -1,7 +1,7 @@
 <template id="projects">
   <v-sheet class="custom-container-sheet bg-background">
 
-    <h2>Meus Projetos</h2>
+    <h2>Alguns Projetos</h2>
     
     <v-slide-group show-arrows class="custom-container-slide-group">
       <v-slide-group-item v-for="project in projects" :key="project.link">
@@ -101,8 +101,8 @@ h2 {
 }
 
 .project-image {
-  height: 210px; /* Altura fixa para todas as imagens */
-  object-fit: cover; /* Faz a imagem preencher o container, cortando se necessário */
+  height: 210px;
+  object-fit: cover;
   width: 100%;
 }
 

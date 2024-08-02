@@ -142,7 +142,7 @@ p {
 
 @media (min-width: 1400px) {
   .custom-info h2 {
-    font-size: 3.8rem;
+    font-size: 3rem;
   }
 }
 </style>
