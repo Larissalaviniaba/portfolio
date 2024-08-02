@@ -1,4 +1,4 @@
-<template>
+<template id="contact">
   <v-row class="custom-container-row">
     
   </v-row>

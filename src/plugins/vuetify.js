@@ -34,7 +34,8 @@ export default createVuetify({
           textPrimary: customColors.black,
           textSecondary: customColors.mediumGrey,
           menu: customColors.red,
-          yellow: customColors.yellow
+          yellow: customColors.yellow,
+          bgCard: customColors.lightGrey
         },
       },
       dark:{
@@ -44,7 +45,8 @@ export default createVuetify({
           textPrimary: customColors.white,
           textSecondary: customColors.mediumGrey,
           menu: customColors.white,
-          yellow: customColors.yellow
+          yellow: customColors.yellow,
+          bgCard: customColors.linesLight
         },
       }
     }

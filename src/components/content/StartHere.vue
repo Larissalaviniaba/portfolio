@@ -67,6 +67,7 @@ a {
 
 .custom-container-row {
   width: 80%;
+  min-height: calc(100vh - 97px);
   margin: auto;
   margin-top: 50px;
 }
@@ -117,10 +118,10 @@ span {
 
 .custom-container-row-2 {
   width: 65%;
-  height: 3.5%;
+  height: 4%;
   background-color: var(--yellow);
   position: absolute;
-  top: 22.5%;
+  top: 28.7%;
   left: 15%;
   z-index: 2;
   padding: 20px;
@@ -179,7 +180,7 @@ span {
   .custom-container-row-2 {
     width: 65%;
     height: 4%;
-    top:21.8%;
+    top:26.6%;
     left: 15%;
     z-index: 2;
     padding: 20px;

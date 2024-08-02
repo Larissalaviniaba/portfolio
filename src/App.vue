@@ -6,26 +6,21 @@
 
     <v-row class="custom-row-main">
       <v-main class="custom-container-main">
-        <StartHere 
-          id="start"
-          class="custom-container-start"
-        />
+        <section id="#">
+          <StartHere />
+        </section>
 
-        <AboutMe 
-          id="about"
-          class="custom-container-about"
-        />
+        <section id="about">
+          <AboutMe />
+        </section>
 
-        <MyProjects 
-          id="projects"
-          class="custom-container-projects"
-        />
+        <section id="projects">
+          <MyProjects />
+        </section>
 
-        <Contact 
-          id="contact"
-          class="custom-container-contact"
-        />
-
+        <section id="contact">
+          <Contact />
+        </section>
       </v-main>
     </v-row>
   </v-app>
@@ -57,16 +52,15 @@
 }
 
 .custom-container-about {
-  min-height: calc(100vh - 200px);
   padding: 20px;
 }
 .custom-container-projects {
-  min-height: calc(100vh - 300px);
+  min-height: calc(100vh - 400px);
 }
 
 @media (max-width: 627px) {
   .custom-container-about {
-    min-height: auto; 
+    min-height: auto;
     padding: 0;
   }
 }

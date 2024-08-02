@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import cv from '@/assets/curriculo-larissa-lavinia.pdf'
+import cv from '@/assets/CV/curriculo-larissa-lavinia.pdf'
 export default {
   data() {
     return {
@@ -73,7 +73,8 @@ a {
 }
 
 .custom-container-row {
-  width: 70%;
+  width: 80%;
+  min-height: calc(100vh - 97px);
   margin: auto;
   margin-top: 50px;
 }
@@ -92,7 +93,7 @@ a {
 }
 
 .custom-buttons {
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
 .image-container {
@@ -116,6 +117,7 @@ a {
 
 span {
   color: var(--red);
+  text-transform: uppercase;
 }
 
 p {
