@@ -39,13 +39,25 @@
       </div>
     </v-col>
     <v-row class="custom-container-row-2">
-      <p><i>"Seja o autor da sua própria história, escreva cada capítulo com coragem e determinação, e transforme desafios em oportunidades para criar um enredo de sucesso. — Desconhecido"</i></p>
+      <p>
+        <i
+          >"Seja o autor da sua própria história, escreva cada capítulo com
+          coragem e determinação, e transforme desafios em oportunidades para
+          criar um enredo de sucesso. — Desconhecido"</i
+        >
+      </p>
     </v-row>
   </v-row>
 </template>
     
-  <script>
-export default {};
+<script>
+export default {
+  computed: {
+    isMobile() {
+      return this.$vuetify.display.width < 600 ? true : false;
+    },
+  },
+};
 </script>
     
   <style scoped>
@@ -54,26 +66,30 @@ a {
 }
 
 .custom-container-row {
-  width: 80%; /* Ajustado para uma maior largura em dispositivos maiores */
+  width: 80%;
   margin: auto;
   margin-top: 50px;
 }
 
 .custom-col-info,
 .custom-col-image {
-  padding: 0 10px; /* Ajusta o espaçamento interno das colunas */
+  padding: 0 10px;
 }
 
 .custom-info {
-  padding: 20px;
+  padding: 20px 70px;
 }
 
 .custom-info h2 {
-  font-size: 2rem; /* Tamanho da fonte padrão */
+  font-size: 2rem;
+}
+
+.custom-buttons {
+  margin-left: 80px;
 }
 
 .custom-buttons .v-btn {
-  margin-left: 10px; /* Espaçamento entre botões */
+  margin: 30px 0 0 10px;
 }
 
 .image-container {
@@ -82,17 +98,17 @@ a {
 
 .main-image {
   width: 75%;
-  height: auto; /* Mantém a proporção da imagem */
+  height: auto;
   border-radius: 50px;
 }
 
 .icon-image {
   position: absolute;
   top: -4%;
-  right: 12%;
-  width: 70%; /* Ajuste o tamanho conforme necessário */
-  height: auto; /* Mantém a proporção da imagem */
-  z-index: 1; /* Garante que o ícone fique sobre a imagem principal */
+  right: 17%;
+  width: 70%;
+  height: auto;
+  z-index: 1;
 }
 
 span {
@@ -100,42 +116,73 @@ span {
 }
 
 .custom-container-row-2 {
-    width: 65%;
-    height: 3.5%;
-    background-color: rgba(252, 191, 73, 0.6); /* Fundo amarelo com transparência */
-    position: absolute;
-    top: 23%; /* Ajusta para que a linha 2 fique parcialmente sobre a linha 1 */
-    left: 15%;
-    z-index: 2;
-    padding: 20px; /* Adiciona preenchimento para tornar a linha 2 visível */
-    border-radius: 20px;
+  width: 65%;
+  height: 3.5%;
+  background-color: var(--yellow);
+  position: absolute;
+  top: 22.5%;
+  left: 15%;
+  z-index: 2;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.custom-container-row-2 p {
+  padding: 5px;
+  font-size: 15px;
+}
+
+@media (max-width: 627px) {
+  .custom-container-row {
+    margin-top: 0;
+  }
+  .custom-info {
+    padding: 0 20px;
+  }
+  .custom-buttons {
+    display: flex;
+    margin: 0;
+  }
+
+  .image-container {
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+
+  .custom-container-row-2 {
+    width: 100%;
+    height: 18%;
+    position: static;
+    margin-top: 20px;
   }
 
   .custom-container-row-2 p {
-    padding: 5px;
     font-size: 15px;
+    padding: 10px;
   }
+}
 
 /* Media Query para telas maiores */
 @media (min-width: 1400px) {
+  .custom-container-row-1 {
+    margin-top: 40px;
+  }
   .image-container {
     position: relative;
     margin-top: 28px;
   }
 
   .custom-info h2 {
-    font-size: 3.8rem; /* Aumenta o tamanho da fonte em telas maiores */
+    font-size: 3.8rem;
   }
 
   .custom-container-row-2 {
     width: 65%;
     height: 4%;
-    background-color: rgba(252, 191, 73, 0.6); /* Fundo amarelo com transparência */
-    position: absolute;
-    top: 20%; /* Ajusta para que a linha 2 fique parcialmente sobre a linha 1 */
+    top:21.8%;
     left: 15%;
     z-index: 2;
-    padding: 20px; /* Adiciona preenchimento para tornar a linha 2 visível */
+    padding: 20px;
     border-radius: 20px;
   }
 

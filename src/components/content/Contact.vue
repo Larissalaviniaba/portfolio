@@ -1,16 +1,17 @@
 <template>
-  <h2>Contact</h2>
+  <v-row class="custom-container-row">
+    
+  </v-row>
 </template>
     
-    <script>
-export default {};
+<script>
+export default {
+ 
+};
 </script>
     
-    <style scoped>
-.custom-container-header {
-  height: 120px;
-  display: flex;
-  box-shadow: none !important;
-}
+<style scoped>
+
+
 </style>
-    
+  

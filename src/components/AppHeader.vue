@@ -1,45 +1,23 @@
 <template>
-  <v-app-bar class="custom-container-header bg-background">
-    <v-bottom-navigation 
-      class="custom-container-navigation bg-background"
-      density="compact"
-    >
-      <img 
+  <!-- Header responsivo -->
+  <HeaderResponsive v-if="isMobile" :menus="items" />
+
+  <v-app-bar v-else class="custom-container-header bg-background">
+    <v-bottom-navigation class="custom-container-navigation bg-background" density="compact">
+      <img
         v-if="this.theme.global.name == 'dark'"
-        src="../assets/myLogoDark.png" 
+        src="../assets/myLogoDark.png"
       />
 
-      <img 
-        v-else
-        src="../assets/myLogoLight.png" 
-      />
+      <img v-else src="../assets/myLogoLight.png" />
 
-      <v-tabs
-        align-tabs="center" 
-        color="menu" 
-        class="custom-tabs"
-      >
-
-        <v-tab>
-          <a href="#">Inicio</a>
-        </v-tab>
-
-        <v-tab>
-          <a href="#about">Sobre</a>
-        </v-tab>
-
-        <v-tab>
-          <a href="#projects">Projetos</a>
-        </v-tab>
-
-        <v-tab>
-          <a href="#contact">Contato</a>
+      <v-tabs align-tabs="center" color="menu" class="custom-tabs">
+        <v-tab v-for="item in items" :key="item.href">
+          <a :href="item.href">{{ item.title }}</a>
         </v-tab>
       </v-tabs>
 
-      <v-btn @click="toggleTheme">
-        <v-icon icon="mdi-theme-light-dark" size="30"></v-icon>
-      </v-btn>
+      <ButtonTheme />
 
       <v-btn value="translation">
         <v-icon icon="mdi-translate" size="30"></v-icon>
@@ -49,24 +27,38 @@
 </template>
 
 <script>
+import HeaderResponsive from "@/components/responsive/HeaderResponsive";
 import { useTheme } from "vuetify";
 
 export default {
   data() {
     return {
       theme: useTheme(),
+      drawer: false,
+      group: null,
+      items: [
+        {
+          title: "Inicio",
+          href: "#",
+        },
+        {
+          title: "Sobre",
+          href: "#about",
+        },
+        {
+          title: "Projetos",
+          href: "#projects",
+        },
+        {
+          title: "Contato",
+          href: "#contact",
+        },
+      ],
     };
   },
-  created() {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      this.theme.global.name = savedTheme;
-    }
-  },
-  methods: {
-    toggleTheme() {
-      this.theme.global.name = this.theme.global.current.dark ? "light" : "dark";
-      localStorage.setItem("theme", this.theme.global.name);
+  computed: {
+    isMobile() {
+      return this.$vuetify.display.width < 600 ? true : false;
     },
   },
 };
@@ -105,7 +97,6 @@ a {
 
 .v-tab {
   display: block;
-  
 }
 
 .custom-tabs {
