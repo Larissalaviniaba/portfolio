@@ -18,6 +18,7 @@
           Sou apaixonada por tecnologia e acredito fielmente no seu potencial
           transformador.
         </p>
+        <br>
         <p>
           Como Desenvolvedora de Software full-stack já acumulo algumas
           experiências em front-end (Vue.js e React) e em back-end (Node.js), e
@@ -29,6 +30,7 @@
           continuar atuando como Desenvolvedora de Software Back-end e/ou
           Front-end.
         </p>
+        <br>
         <p>
           Gosto de ser desafiada, pois os desafios impulsionam meu crescimento
           profissional. Autonomia e disciplina foram habilidades que desenvolvi
