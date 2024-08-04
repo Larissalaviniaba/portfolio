@@ -2,36 +2,23 @@
   <v-row class="custom-container-row">
     <v-col cols="12" md="7" class="custom-col-card">
       <v-card class="contact-card bg-background">
-        <v-card-title class="text-h5">Entre em contato</v-card-title>
+        <v-card-title class="text-h5">{{ $t(`${this.translatePath}.title`) }}</v-card-title>
         <v-card-text>
+
           <v-form ref="form" v-model="valid">
-            <v-text-field
-              v-model="name"
-              :rules="nameRules"
-              label="Nome"
-              required
-              color="red"
-            ></v-text-field>
-            <v-text-field
-              v-model="email"
-              :rules="emailRules"
-              label="E-mail"
-              type="email"
-              required
-              color="red"
-            ></v-text-field>
-            <v-textarea
-              v-model="message"
-              :rules="messageRules"
-              label="Mensagem"
-              required
-              color="red"
-            ></v-textarea>
+            <v-text-field v-model="name" :rules="nameRules" :label="$t(`${this.translatePath}.form.fields.name.label`)"
+              required color="red"></v-text-field>
+            <v-text-field v-model="email" :rules="emailRules"
+              :label="$t(`${this.translatePath}.form.fields.email.label`)" type="email" required
+              color="red"></v-text-field>
+            <v-textarea v-model="message" :rules="messageRules"
+              :label="$t(`${this.translatePath}.form.fields.message.label`)" required color="red"></v-textarea>
           </v-form>
+
         </v-card-text>
         <v-card-actions>
-          <v-btn :disabled="!valid" @click="formSubmit" color="red">{{
-            loadind ? "Enviando..." : "Enviar"
+          <v-btn @click="formSubmit" color="red">{{
+            $t(loadind ? `${this.translatePath}.form.btn.sending` : `${this.translatePath}.form.btn.send`)
           }}</v-btn>
         </v-card-actions>
       </v-card>
@@ -52,39 +39,43 @@
     </v-col>
   </v-row>
 
-  <Alert
-    v-if="emailSent"
-    title="Sucesso"
-    text="E-mail enviado com sucesso!"
-    type="success"
-  />
+  <Alert v-if="emailSent" :title="$t(`${this.translatePath}.alert.title`)"
+    :text="$t(`${this.translatePath}.alert.text`)" type="success" />
 </template>
 
 <script>
 export default {
   data() {
     return {
+      translatePath: 'contact',
       valid: false,
       emailSent: false,
       loadind: false,
       name: "",
       email: "",
       message: "",
-      nameRules: [
-        (value) => !!value || "Nome é obrigatório.",
-        (value) =>
-          value.length <= 50 || "Nome deve ter menos de 50 caracteres.",
-      ],
-      emailRules: [
-        (value) => !!value || "E-mail é obrigatório.",
-        (value) => /.+@.+\..+/.test(value) || "E-mail deve ser válido.",
-      ],
-      messageRules: [
-        (value) => !!value || "Mensagem é obrigatória.",
-        (value) =>
-          value.length >= 10 || "Mensagem deve ter pelo menos 10 caracteres.",
-      ],
     };
+  },
+  computed: {
+    nameRules() {
+      return [
+        (value) => !!value || this.$t(`${this.translatePath}.form.fields.name.validation.required`),
+        (value) => value.length <= 50 || this.$t(`${this.translatePath}.form.fields.name.validation.length`),
+      ]
+    },
+    emailRules() {
+      return [
+        (value) => !!value || this.$t(`${this.translatePath}.form.fields.email.validation.required`),
+        (value) => /.+@.+\..+/.test(value) || this.$t(`${this.translatePath}.form.fields.email.validation.invalid`),
+      ]
+    },
+    messageRules() {
+      return [
+        (value) => !!value || this.$t(`${this.translatePath}.form.fields.message.validation.required`),
+        (value) =>
+          value.length >= 10 || this.$t(`${this.translatePath}.form.fields.message.validation.length`),
+      ]
+    },
   },
   methods: {
     formSubmit() {

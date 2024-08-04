@@ -1,0 +1,22 @@
+{
+    "loginScreen": {
+        "title": "Pantalla de Inicio de Sesión",
+        "description": "Pantalla de inicio de sesión responsiva ♥"
+    },
+    "phoneBook": {
+        "title": "Agenda",
+        "description": "Este proyecto es una agenda telefónica desarrollada con HTML, CSS, JavaScript y PHP. Permite almacenar, editar y eliminar contactos, proporcionando una interfaz simple e intuitiva para la gestión de contactos."
+    },
+    "dictionary": {
+        "title": "Diccionario",
+        "description": "Esta es la aplicación Diccionario, que permite a los usuarios encontrar el significado de las palabras buscadas. Este proyecto se desarrolló para poner en práctica mis conocimientos en Vue.js y consumo de API."
+    },
+    "wordGame": {
+        "title": "Juego de Palabras",
+        "description": "Durante mis estudios de JS, decidí desafiarme a mí misma aplicando los conocimientos que estaba adquiriendo en un juego. Decidí recrear un juego que me gusta llamado 'Termo' y este fue el resultado."
+    },
+    "orangePortfolio": {
+        "title": "Portafolio Naranja",
+        "description": "Durante mis estudios de JS, decidí desafiarme a mí misma aplicando los conocimientos que estaba adquiriendo en un juego. Decidí recrear un juego que me gusta llamado 'Termo' y este fue el resultado."
+    }
+}

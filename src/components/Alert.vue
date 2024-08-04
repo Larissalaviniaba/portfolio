@@ -1,7 +1,6 @@
 <template>
-  <transition name="fade" @after-leave="onAfterLeave">
+  <transition name="fade">
     <v-alert 
-      v-if="showAlert" 
       class="custom-alert" 
       :text="text" 
       :title="title" 
@@ -16,34 +15,23 @@ export default {
     title: String,
     type: String,
     text: String,
-    showAlert: {
-      type: Boolean,
-      default: true,
-    },
   },
-  methods: {
-    onAfterLeave() {
-      // Aqui você pode adicionar lógica para lidar com o alerta após ele desaparecer
-      console.log("Alerta desapareceu");
-    }
-  }
 };
 </script>
 
 <style scoped>
 .custom-alert {
   position: absolute;
-  bottom: 150px; /* Ajuste conforme necessário */
+  bottom: 150px;
   right: 20px;
-  width: 300px; /* Ajuste a largura conforme necessário */
+  width: 300px;
   z-index: 1000;
 }
 
-/* Transição de entrada e saída */
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.5s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active em <2.1.8 */ {
+.fade-enter, .fade-leave-to{
   opacity: 0;
 }
 </style>

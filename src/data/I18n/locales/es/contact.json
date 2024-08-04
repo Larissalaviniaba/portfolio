@@ -1,0 +1,36 @@
+{
+    "title": "Contáctanos",
+    "form": {
+        "fields": {
+            "name": {
+                "label": "Nombre",
+                "validation": {
+                    "required": "Nombre es obligatorio.",
+                    "length": "El nombre debe tener menos de 50 caracteres."
+                }
+            },
+            "email": {
+                "label": "Correo electrónico",
+                "validation": {
+                    "required": "Correo electrónico es obligatorio.",
+                    "invalid": "El correo electrónico debe ser válido."
+                }
+            },
+            "message": {
+                "label": "Mensaje",
+                "validation": {
+                    "required": "Mensaje es obligatorio.",
+                    "length": "El mensaje debe tener al menos 10 caracteres."
+                }
+            }
+        },
+        "btn": {
+            "sending": "Enviando...",
+            "send": "Enviar"
+        }
+    },
+    "alert": {
+        "title": "Éxito",
+        "text": "¡Correo electrónico enviado con éxito!"
+    }
+}

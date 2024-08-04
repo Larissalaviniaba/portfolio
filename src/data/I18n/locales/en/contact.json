@@ -1,0 +1,36 @@
+{
+    "title": "Contact Us",
+    "form": {
+        "fields": {
+            "name": {
+                "label": "Name",
+                "validation": {
+                    "required": "Name is required.",
+                    "length": "Name must be less than 50 characters."
+                }
+            },
+            "email": {
+                "label": "Email",
+                "validation": {
+                    "required": "Email is required.",
+                    "invalid": "Email must be valid."
+                }
+            },
+            "message": {
+                "label": "Message",
+                "validation": {
+                    "required": "Message is required.",
+                    "length": "Message must be at least 10 characters."
+                }
+            }
+        },
+        "btn": {
+            "sending": "Sending...",
+            "send": "Send"
+        }
+    },
+    "alert": {
+        "title": "Success",
+        "text": "Email sent successfully!"
+    }
+}

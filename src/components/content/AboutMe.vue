@@ -3,48 +3,31 @@
     <v-col class="custom-col-image" cols="12" md="" xs="3">
       <div class="image-container">
         <img src="../../assets/icon-2.png" alt="Icon" class="icon-image" />
-        <img
-          src="../../assets/me-2.jpg"
-          alt="Larissa Lavínia"
-          class="main-image"
-        />
+        <img src="../../assets/me-2.jpg" alt="Larissa Lavínia" class="main-image" />
       </div>
     </v-col>
     <v-col class="custom-col-info" cols="12" md="7" xs="9">
       <div class="custom-info">
-        <h2><span>Um pouco sobre mim</span></h2>
+        <h2><span>{{ $t(`${this.translatePath}.title`) }}</span></h2>
         <p>
-          Soteropolitana, aficionada por quebra-cabeças e The Big Bang Theory.
-          Sou apaixonada por tecnologia e acredito fielmente no seu potencial
-          transformador.
+          {{ $t(`${this.translatePath}.content.0`) }}
         </p>
         <br>
         <p>
-          Como Desenvolvedora de Software full-stack já acumulo algumas
-          experiências em front-end (Vue.js e React) e em back-end (Node.js), e
-          estou constantemente buscando formas de aprimorar os meus
-          conhecimentos.
+          {{ $t(`${this.translatePath}.content.1`) }}
         </p>
         <p>
-          Tenho como objetivo profissional elevar o nível do meu conhecimento e
-          continuar atuando como Desenvolvedora de Software Back-end e/ou
-          Front-end.
+          {{ $t(`${this.translatePath}.content.2`) }}
         </p>
         <br>
         <p>
-          Gosto de ser desafiada, pois os desafios impulsionam meu crescimento
-          profissional. Autonomia e disciplina foram habilidades que desenvolvi
-          estudando remotamente, tenho facilidade para trabalhar em equipe e
-          comprometimento com os meus objetivos.
+          {{ $t(`${this.translatePath}.content.3`) }}
         </p>
       </div>
       <div class="custom-buttons">
         <v-btn color="red">
-          <a
-            :href="cv" download="curriculo-larissa-lavinia.pdf"
-            target="_blank"
-          >
-            Baixar CV
+          <a :href="cvTranslated()" download="larissa-lavinia.pdf" target="_blank">
+            {{ $t(`${this.translatePath}.downloadCv`) }}
           </a>
           <v-icon icon="mdi-cloud-download-outline" size="20" />
         </v-btn>
@@ -54,11 +37,28 @@
 </template>
 
 <script>
-import cv from '@/assets/CV/curriculo-larissa-lavinia.pdf'
+import cvPt from '@/assets/CV/cvPt.pdf'
+import cvEn from '@/assets/CV/cvEn.pdf'
+import cvEs from '@/assets/CV/cvEs.pdf'
+
 export default {
   data() {
     return {
-      cv
+      translatePath: 'aboutMe',
+      cvPt,
+      cvEn,
+      cvEs
+    }
+  },
+  methods: {
+    cvTranslated() {
+      if(localStorage.getItem("locale") == 'pt'){
+        return cvPt
+      } else if (localStorage.getItem("locale") == 'en') {
+        return cvEn
+      } else {
+        return cvEs
+      }
     }
   },
   computed: {
@@ -131,11 +131,13 @@ p {
     margin-top: 0;
     padding: 0;
   }
+
   .custom-buttons {
     display: flex;
     justify-content: center;
     margin: 30px 0;
   }
+
   .image-container {
     margin-top: 40px;
     margin-left: 20px;

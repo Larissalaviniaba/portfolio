@@ -1,17 +1,17 @@
 <template id="projects">
   <v-sheet class="custom-container-sheet bg-background">
 
-    <h2>Alguns Projetos</h2>
-    
+    <h2>{{ $t(`${this.translatePath}.title`) }}</h2>
+
     <v-slide-group show-arrows class="custom-container-slide-group">
       <v-slide-group-item v-for="project in projects" :key="project.link">
         <v-card class="project-card bg-bgCard">
           <v-img :src="project.image" class="project-image"></v-img>
 
-          <v-card-title class="project-title">{{ project.title }}</v-card-title>
+          <v-card-title class="project-title">{{ $t(project.title) }}</v-card-title>
 
           <v-card-subtitle class="project-description">
-            {{ project.description }}
+            {{ $t(project.description) }}
           </v-card-subtitle>
 
           <v-card-actions class="action-buttons">
@@ -21,23 +21,14 @@
               </v-icon>
             </v-btn>
 
-            <v-btn @click="openGithub(project.link)"> Ver no GitHub </v-btn>
+            <v-btn @click="openGithub(project.link)">{{ $t(`${this.translatePath}.btn.viewOnGithub`) }}</v-btn>
 
-            <v-btn icon @click="shareProject(i)">
-              <v-icon>mdi-share-variant</v-icon>
-            </v-btn>
           </v-card-actions>
 
           <v-divider></v-divider>
 
           <v-card-actions class="tags">
-            <v-chip
-              v-for="(tag, index) in project.tags"
-              :key="index"
-              class="tag"
-              outlined
-              color="red"
-            >
+            <v-chip v-for="(tag, index) in project.tags" :key="index" class="tag" outlined color="red">
               {{ tag }}
             </v-chip>
           </v-card-actions>
@@ -52,6 +43,7 @@ import projects from "@/data/projects";
 export default {
   data() {
     return {
+      translatePath: 'myProjects',
       projects,
     };
   },
@@ -134,10 +126,12 @@ h2 {
   .custom-container-sheet {
     width: 100%;
   }
+
   .custom-container-slide-group {
     width: 100% !important;
     height: 60vh;
   }
+
   .project-card {
     width: 270px;
   }

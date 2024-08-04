@@ -1,0 +1,22 @@
+{
+    "loginScreen": {
+        "title": "Login Screen",
+        "description": "Responsive login screen ♥"
+    },
+    "phoneBook": {
+        "title": "Phone Book",
+        "description": "This project is a phone book developed with HTML, CSS, JavaScript, and PHP. It allows users to store, edit, and delete contacts, providing a simple and intuitive interface for managing contacts."
+    },
+    "dictionary": {
+        "title": "Dictionary",
+        "description": "This is the Dictionary app, which allows users to find the meanings of searched words. This project was developed to put my knowledge in Vue.js and API consumption into practice."
+    },
+    "wordGame": {
+        "title": "Word Game",
+        "description": "During my JS studies, I decided to challenge myself by applying the knowledge I was acquiring in a game. I decided to recreate a game I like called 'Termo,' and this was the result."
+    },
+    "orangePortfolio": {
+        "title": "Orange Portfolio",
+        "description": "During my JS studies, I decided to challenge myself by applying the knowledge I was acquiring in a game. I decided to recreate a game I like called 'Termo,' and this was the result."
+    }
+}

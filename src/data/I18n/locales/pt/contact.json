@@ -1,0 +1,36 @@
+{
+    "title": "Entre em contato",
+    "form": {
+        "fields": {
+            "name": {
+                "label": "Nome",
+                "validation": {
+                    "required": "Nome é obrigatório.",
+                    "length": "Nome deve ter menos de 50 caracteres."
+                }
+            },
+            "email": {
+                "label": "E-mail",
+                "validation": {
+                    "required": "E-mail é obrigatório.",
+                    "invalid": "E-mail deve ser válido."
+                }
+            },
+            "message": {
+                "label": "Mensagem",
+                "validation": {
+                    "required": "Mensagem é obrigatória.",
+                    "length": "Mensagem deve ter pelo menos 10 caracteres."
+                }
+            }
+        },
+        "btn": {
+            "sending": "Enviando...",
+            "send": "Enviar"
+        }
+    },
+    "alert": {
+        "title": "Sucesso",
+        "text": "E-mail enviado com sucesso!"
+    }
+}

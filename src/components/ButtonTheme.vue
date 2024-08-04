@@ -1,10 +1,10 @@
 <template>
-    <v-btn @click="toggleTheme">
-        <v-icon icon="mdi-brightness-6" size="30"></v-icon>
-    </v-btn>
+  <v-btn @click="toggleTheme">
+    <v-icon icon="mdi-brightness-6" size="30"></v-icon>
+  </v-btn>
 </template>
-  
-  <script>
+
+<script>
 import { useTheme } from "vuetify";
 
 export default {
@@ -29,8 +29,3 @@ export default {
   },
 };
 </script>
-  
-<style scoped>
-
-</style>
-  

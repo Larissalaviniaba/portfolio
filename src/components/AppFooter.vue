@@ -1,15 +1,21 @@
 <template>
   <v-footer height="80" class="bg-red">
-  <p>Desenvolvido com 💛 por <b>Larissa Lavínia</b></p>
-  <p>
-    <v-icon size="15" icon="mdi-copyright"/> 2024 | Larissa Lavínia | todos osdireitos reservados
-  </p>
-    
+    <p>{{ $t(`${this.translatePath}.developedBy`) }}<b>{{ $t(`${this.translatePath}.me`) }}</b></p>
+    <p>
+      <v-icon size="15" icon="mdi-copyright" /> {{ $t(`${this.translatePath}.rightsReserved`) }}
+    </p>
+
   </v-footer>
 </template>
 
-<script setup>
-  
+<script>
+export default {
+  data() {
+    return {
+      translatePath: 'footer',
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -17,6 +23,7 @@
   display: flex;
   flex-direction: column;
 }
+
 p {
   color: black;
 }
@@ -27,5 +34,4 @@ p {
     font-size: 13px;
   }
 }
- 
 </style>

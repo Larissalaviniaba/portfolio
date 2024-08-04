@@ -23,7 +23,9 @@
         </section>
       </v-main>
     </v-row>
-    <v-row><AppFooter/></v-row>
+    <v-row>
+      <AppFooter/>
+    </v-row>
   </v-app>
 </template>
 
