@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --white: #FFFCF8;
+    --red: #D62828;
+    --yellow: rgba(252, 191, 73, 0.6);
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Epilogue', sans-serif;
+}
+
+a {
+    all: unset;
+}
