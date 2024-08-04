@@ -86,7 +86,7 @@ span {
 .v-btn {
   margin: 30px 0 0 10px;
   background-color: var(--red);
-  color: white
+  color: white;
 }
 
 .custom-col-image {
@@ -152,7 +152,6 @@ span {
   left: 15%;
   animation-direction: reverse;
   font-size: 40px !important;
-  
 }
 
 /* Animação de flutuação */
@@ -206,6 +205,10 @@ span {
     font-size: 15px;
     padding: 10px;
   }
+
+  .floating-icon {
+    display: none; /* Ocultar ícones flutuantes em dispositivos móveis */
+  }
 }
 
 /* Media Query para telas maiores */
@@ -243,7 +246,6 @@ span {
     left: 16%;
     animation-direction: reverse;
     font-size: 80px !important;
-    
   }
 }
 </style>
