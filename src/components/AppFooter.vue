@@ -2,7 +2,7 @@
   <v-footer height="80" class="bg-red">
     <p>{{ $t(`${this.translatePath}.developedBy`) }}<b>{{ $t(`${this.translatePath}.me`) }}</b></p>
     <p>
-      <v-icon size="15" icon="mdi-copyright" /> {{ $t(`${this.translatePath}.rightsReserved`) }}
+      <v-icon size="15" icon="mdi-copyright" /> {{ $t(`${this.translatePath}.year`) + " | " + $t(`${this.translatePath}.me`) + " | " + $t(`${this.translatePath}.protect`) }}
     </p>
 
   </v-footer>
