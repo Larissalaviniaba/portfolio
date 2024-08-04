@@ -1,8 +1,6 @@
-// Styles
+// vuetify.js
 import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
-
-// Composables
 import { createVuetify } from 'vuetify'
 
 const customColors = {
@@ -17,22 +15,22 @@ const customColors = {
 export default createVuetify({
   theme: {
     themes: {
-      light:{
+      light: {
         dark: false,
         colors: {
           background: customColors.white,
           yellow: customColors.yellow,
-          bgCard: customColors.lightGrey
+          bgCard: customColors.lightGrey,
         },
       },
-      dark:{
+      dark: {
         dark: true,
         colors: {
           background: customColors.veryDarkGrey,
           yellow: customColors.yellow,
-          bgCard: customColors.linesLight
+          bgCard: customColors.linesLight,
         },
-      }
-    }
+      },
+    },
   },
 })

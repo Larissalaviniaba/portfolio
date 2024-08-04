@@ -1,17 +1,25 @@
-// Styles
-import "@/main.css"
+// styles
+import '@/styles/main.css'
 
-// Plugins
-import { registerPlugins } from '@/plugins'
-
-// Components
-import App from './App.vue'
-
-// Composables
+// main.js
 import { createApp } from 'vue'
+import App from './App.vue'
+import vuetify from '@/plugins/vuetify'
+import { createI18nInstance } from '@/plugins/i18n'
 
-const app = createApp(App)
+async function registerPlugins(app) {
+  const vueI18n = await createI18nInstance();
+  
+  app.use(vuetify);
+  app.use(vueI18n);
+}
 
-registerPlugins(app)
+async function bootstrap() {
+  const app = createApp(App);
+  
+  await registerPlugins(app);
 
-app.mount('#app')
+  app.mount('#app');
+}
+
+bootstrap();
