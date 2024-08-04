@@ -17,6 +17,6 @@
     },
     "orangePortfolio": {
         "title": "Orange Portifólio",
-        "description": "Em meio aos meus estudos de JS decidi me desafiar e colocar em prática os conhecimentos que estava adquirindo em um jogo. Decidi recriar um jogo que eu gosto muito chamado 'Termo' e esse foi o resultado."
+        "description": "Este projeto é um portfólio desenvolvido durante um hackathon. Ele permite que usuários publiquem e compartilhem seus projetos em uma galeria interativa."
     }
 }

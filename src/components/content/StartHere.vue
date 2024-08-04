@@ -1,5 +1,6 @@
 <template>
   <v-row class="custom-container-row">
+    <!-- Conteúdo existente -->
     <v-col class="custom-col-info" cols="12" md="8" xs="9">
       <div class="custom-info">
         <h2>{{ $t(`${this.translatePath}.salutation.0`) }}</h2>
@@ -36,6 +37,10 @@
         <i>{{ $t(`${this.translatePath}.phrase`) }}</i>
       </p>
     </v-row>
+
+    <!-- Ícones flutuantes -->
+    <v-icon class="floating-icon floating-icon-1" icon="mdi-triangle" size="110" />
+    <v-icon class="floating-icon floating-icon-2" icon="mdi-triangle" size="74" />
   </v-row>
 </template>
 
@@ -63,7 +68,7 @@ export default {
 }
 
 .custom-info {
-  padding: 20px 70px;
+  padding: 0px 70px;
 }
 
 h2 {
@@ -108,20 +113,66 @@ span {
 }
 
 .custom-container-row-2 {
-  width: 65%;
-  height: 3.5%;
+  width: 55%;
+  height: 3%;
   background-color: var(--yellow);
   position: absolute;
-  top: 21%;
-  left: 15%;
+  top: 21.7%;
+  left: 25%;
   z-index: 2;
-  padding: 20px;
+  padding: 17px;
   border-radius: 20px;
 }
 
 .custom-container-row-2 p {
   padding: 5px;
-  font-size: 15px;
+  font-size: 14px;
+}
+
+/* Ícones flutuantes e giratórios */
+.floating-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 0.5;
+  animation: float 5s infinite, rotate 6s infinite linear;
+}
+
+.floating-icon-1 {
+  top: 18.6%;
+  left: 19%;
+  animation-direction: normal;
+  color: var(--red);
+  font-size: 70px !important;
+}
+
+.floating-icon-2 {
+  top: 21%;
+  left: 15%;
+  animation-direction: reverse;
+  font-size: 40px !important;
+  
+}
+
+/* Animação de flutuação */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Animação de rotação */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Media Query para mobile */
@@ -173,12 +224,26 @@ span {
 
   .custom-container-row-2 {
     height: 4%;
-    top: 21.6%;
+    top: 21.8%;
   }
 
   .custom-container-row-2 p {
     padding: 20px;
     font-size: 20px;
+  }
+
+  .floating-icon-1 {
+    top: 19.8%;
+    left: 21%;
+    font-size: 110px !important;
+  }
+
+  .floating-icon-2 {
+    top: 22%;
+    left: 16%;
+    animation-direction: reverse;
+    font-size: 80px !important;
+    
   }
 }
 </style>

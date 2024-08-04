@@ -1,7 +1,7 @@
 {
     "loginScreen": {
         "title": "Pantalla de Inicio de Sesión",
-        "description": "Pantalla de inicio de sesión responsiva ♥"
+        "description": "Pantalla de inicio de sesión responsive ♥"
     },
     "phoneBook": {
         "title": "Agenda",
@@ -9,14 +9,14 @@
     },
     "dictionary": {
         "title": "Diccionario",
-        "description": "Esta es la aplicación Diccionario, que permite a los usuarios encontrar el significado de las palabras buscadas. Este proyecto se desarrolló para poner en práctica mis conocimientos en Vue.js y consumo de API."
+        "description": "Este es el Diccionario, una aplicación que permite al usuario encontrar el significado de las palabras buscadas. Proyecto desarrollado con la intención de practicar mis conocimientos en Vue.JS y consumo de API."
     },
     "wordGame": {
         "title": "Juego de Palabras",
-        "description": "Durante mis estudios de JS, decidí desafiarme a mí misma aplicando los conocimientos que estaba adquiriendo en un juego. Decidí recrear un juego que me gusta llamado 'Termo' y este fue el resultado."
+        "description": "Durante mis estudios de JS, decidí desafiarme a mí misma y poner en práctica los conocimientos que estaba adquiriendo en un juego. Decidí recrear un juego que me gusta mucho llamado 'Termo' y este fue el resultado."
     },
     "orangePortfolio": {
-        "title": "Portafolio Naranja",
-        "description": "Durante mis estudios de JS, decidí desafiarme a mí misma aplicando los conocimientos que estaba adquiriendo en un juego. Decidí recrear un juego que me gusta llamado 'Termo' y este fue el resultado."
+        "title": "Orange Portfolio",
+        "description": "Este proyecto es un portafolio desarrollado durante un hackathon. Permite que los usuarios publiquen y compartan sus proyectos en una galería interactiva."
     }
 }
