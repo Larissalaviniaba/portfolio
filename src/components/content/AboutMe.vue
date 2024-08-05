@@ -86,12 +86,8 @@ a {
   padding: 0 10px;
 }
 
-.custom-info {
-  padding: 20px 0;
-}
-
 .custom-info h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .custom-buttons {

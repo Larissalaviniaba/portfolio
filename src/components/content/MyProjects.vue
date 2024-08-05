@@ -4,8 +4,8 @@
     <h2>{{ $t(`${this.translatePath}.title`) }}</h2>
 
     <v-slide-group show-arrows class="custom-container-slide-group">
-      <v-slide-group-item v-for="project in projects" :key="project.link">
-        <v-card class="project-card bg-bgCard">
+      <v-slide-group-item v-for="(project) in projects" :key="project.link">
+        <v-card class="project-card bg-bgCard" @click="openProjectDetail(project)">
           <v-img :src="project.image" class="project-image"></v-img>
 
           <v-card-title class="project-title">{{ $t(project.title) }}</v-card-title>
@@ -15,13 +15,13 @@
           </v-card-subtitle>
 
           <v-card-actions class="action-buttons">
-            <v-btn icon @click="project.liked = !project.liked">
+            <v-btn icon @click.stop="project.liked = !project.liked">
               <v-icon :color="project.liked ? 'red' : 'grey'">
                 mdi-heart
               </v-icon>
             </v-btn>
 
-            <v-btn @click="openGithub(project.link)">{{ $t(`${this.translatePath}.btn.viewOnGithub`) }}</v-btn>
+            <v-btn @click.stop="openGithub(project.link)">{{ $t(`${this.translatePath}.btn.viewOnGithub`) }}</v-btn>
 
           </v-card-actions>
 
@@ -35,24 +35,36 @@
         </v-card>
       </v-slide-group-item>
     </v-slide-group>
+
+    <!-- Usando o componente ModalDetail -->
+    <ModalDetail :show="showProjectDetail" @update:show="showProjectDetail = $event" :project="selectedProject" />
+    
   </v-sheet>
 </template>
 
 <script>
 import projects from "@/data/projects";
+import ModalDetail from "@/components/ModalDetail.vue";
+
 export default {
+  components: {
+    ModalDetail,
+  },
   data() {
     return {
       translatePath: 'myProjects',
       projects,
+      showProjectDetail: false,
+      selectedProject: {},
     };
   },
   methods: {
-    shareProject(index) {
-      // Implementar funcionalidade de compartilhar
-    },
     openGithub(link) {
       window.open(link, "_blank");
+    },
+    openProjectDetail(project) {
+      this.selectedProject = project;
+      this.showProjectDetail = true;
     },
   },
 };
