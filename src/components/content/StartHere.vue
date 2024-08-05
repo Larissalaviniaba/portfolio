@@ -94,11 +94,12 @@ span {
 }
 
 .image-container {
+  width: 330px;
   position: relative;
 }
 
 .main-image {
-  width: 75%;
+  max-width: 250px;
   height: auto;
   border-radius: 50px;
 }
@@ -106,8 +107,8 @@ span {
 .icon-image {
   position: absolute;
   top: -4%;
-  right: 17%;
-  width: 70%;
+  right: 50px;
+  max-width: 250px;
   height: auto;
   z-index: 1;
 }
@@ -117,7 +118,7 @@ span {
   height: 3%;
   background-color: var(--yellow);
   position: absolute;
-  top: 21.7%;
+  top: 21.8%;
   left: 25%;
   z-index: 2;
   padding: 17px;
@@ -175,7 +176,7 @@ span {
 }
 
 /* Media Query para mobile */
-@media (max-width: 627px) {
+@media (max-width: 957px) {
   .custom-container-row {
     margin-top: 0;
   }

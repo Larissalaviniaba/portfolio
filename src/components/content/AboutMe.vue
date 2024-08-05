@@ -99,11 +99,12 @@ a {
 }
 
 .image-container {
+  width: 330px;
   position: relative;
 }
 
 .main-image {
-  width: 80%;
+  max-width: 280px;
   height: auto;
   border-radius: 50px;
 }
@@ -112,7 +113,7 @@ a {
   position: absolute;
   top: -4%;
   left: -8%;
-  width: 70%;
+  max-width: 250px;
   height: auto;
   z-index: 1;
 }
@@ -126,7 +127,7 @@ p {
   text-align: justify;
 }
 
-@media (max-width: 627px) {
+@media (max-width: 957px) {
   .custom-container-row {
     margin-top: 0;
     padding: 0;

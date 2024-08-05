@@ -76,13 +76,13 @@ h2 {
 }
 
 .custom-container-slide-group {
-  width: 80% !important;
+  width: 90% !important;
   height: 70vh;
   margin-bottom: 10px;
 }
 
 .project-card {
-  width: 300px;
+  width: 290px;
   margin: auto 20px;
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -122,18 +122,19 @@ h2 {
   margin: 5px;
 }
 
-@media (max-width: 627px) {
+@media (max-width: 957px) {
   .custom-container-sheet {
     width: 100%;
+    padding: 0;
   }
 
   .custom-container-slide-group {
     width: 100% !important;
-    height: 60vh;
+    height: 65vh;
   }
 
   .project-card {
-    width: 270px;
+    width: 290px !important;
   }
 }
 </style>

@@ -160,7 +160,7 @@ span {
   margin-top: 100px;
 }
 
-@media (max-width: 627px) {
+@media (max-width: 957px) {
   .custom-container-row {
     width: 100%;
   }

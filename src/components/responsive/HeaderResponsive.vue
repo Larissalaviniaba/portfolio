@@ -12,9 +12,9 @@
     </template>
   </v-app-bar>
 
-  <v-navigation-drawer v-model="drawer" class="custom-navigation-drawer">
+  <v-navigation-drawer v-model="drawer" class="custom-navigation-drawer bg-background">
     <v-list v-for="item in menus" :key="item.href">
-      <a :href="item.href" @click.stop="drawer = !drawer">{{ item.title }}</a>
+      <a :href="item.href" @click.stop="drawer = !drawer">{{ $t(item.title) }}</a>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -38,7 +38,12 @@ export default {
 
 <style scoped>
 a {
-  all: unset;
-  padding: 20px;
+  font-size: 18px;
+  margin: 30px;
+}
+
+.v-navigation-drawer {
+  width: 200px !important;
+  height: 190px !important;
 }
 </style>
