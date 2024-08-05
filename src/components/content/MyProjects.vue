@@ -82,7 +82,7 @@ h2 {
 }
 
 .project-card {
-  width: 290px;
+  width: 300px;
   margin: auto 20px;
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -105,7 +105,6 @@ h2 {
 
 .project-description {
   font-size: 1rem;
-  color: black;
 }
 
 .action-buttons {

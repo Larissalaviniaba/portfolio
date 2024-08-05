@@ -28,7 +28,7 @@ p {
   color: black;
 }
 
-@media (max-width: 627px) {
+@media (max-width: 957px) {
   p {
     margin: 3px auto;
     font-size: 13px;

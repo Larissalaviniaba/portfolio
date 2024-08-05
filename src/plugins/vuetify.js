@@ -5,6 +5,9 @@ import { createVuetify } from 'vuetify'
 
 const customColors = {
   veryDarkGrey: '#20212C',
+  darkGrey: '#2B2C37',
+  linesDark: '#3E3F4E',
+  mediumGrey: '#828FA3',
   linesLight: '#E4EBFA',
   lightGrey: '#F4F7FD',
   white: '#FFFCF8',
@@ -28,7 +31,7 @@ export default createVuetify({
         colors: {
           background: customColors.veryDarkGrey,
           yellow: customColors.yellow,
-          bgCard: customColors.linesLight,
+          bgCard: customColors.linesDark,
         },
       },
     },
