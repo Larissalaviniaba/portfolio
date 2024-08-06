@@ -115,10 +115,10 @@ span {
 
 .custom-container-row-2 {
   width: 55%;
-  height: 2.8%;
+  height: 2.7%;
   background-color: var(--yellow);
   position: absolute;
-  top: 19%;
+  top: 18.5%;
   left: 25%;
   z-index: 2;
   padding: 17px;
