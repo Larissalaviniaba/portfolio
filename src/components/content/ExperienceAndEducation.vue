@@ -184,7 +184,9 @@ export default {
   }
 
   .custom-card {
-    max-width: 100%; /* Deixe o card ocupar toda a largura em telas menores */
+    margin: auto !important;
+    margin-bottom: 10px !important;
+    max-width: 90%; /* Deixe o card ocupar toda a largura em telas menores */
   }
 
   .timeline-container {
