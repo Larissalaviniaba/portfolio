@@ -16,6 +16,7 @@
             </v-card-text>
 
             <v-card-actions>
+                <v-btn @click.stop="openGithub(project.link)">{{ $t(`modalDetail.btn.viewOnGithub`) }}</v-btn>
                 <v-btn @click="close">{{ $t('modalDetail.btn.close') }}</v-btn>
             </v-card-actions>
         </v-card>
@@ -35,6 +36,9 @@ export default {
         },
     },
     methods: {
+        openGithub(link) {
+            window.open(link, "_blank");
+        },
         close() {
             this.$emit('update:show', false);
         },

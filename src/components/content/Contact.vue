@@ -124,7 +124,7 @@ export default {
 }
 
 .contact-card {
-  width: 90%;
+  width: 95%;
   margin-left: 20px;
   box-shadow: none;
 }

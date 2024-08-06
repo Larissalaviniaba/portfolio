@@ -1,5 +1,6 @@
 {
     "btn": {
-        "close":  "Fechar"
+        "close":  "Fechar",
+        "viewOnGithub": "Ver no GitHub"
     }
 }

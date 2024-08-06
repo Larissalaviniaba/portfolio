@@ -1,0 +1,30 @@
+{
+    "education": {
+        "0": {
+            "title": "Desenvolvimento Front-End",
+            "institution": "Digital House",
+            "date": "Mai de 2022 - Set de 2022",
+            "description": "O curso se dispõe a ensinar fundamentos da programação, Javascript, HTML, CSS, Javascript front, React."
+        },
+        "1": {
+            "title": "Desenvolvimento Back-End",
+            "institution": "Cubos Academy",
+            "date": "Jun de 2023 - Nov de 2023",
+            "description": "Desenvolvimento de APIs Rest, Node.js, PostgreSQL."
+        }
+    },
+    "experience": {
+        "0": {
+            "title": "Desenvolvedora Full-stack",
+            "company": "Betabit",
+            "date": "Mar de 2023 - Mar de 2024",
+            "description": "Aprimorar o desenvolvimento de aplicações utilizando Vue, React, node.js, Typescript, e Git."
+        },
+        "1": {
+            "title": "Desenvolvedora Full-stack",
+            "company": "FCamara",
+            "date": "Mar de 2024 - Atual",
+            "description": "Vue, Java, node.js, MongoDB, e Git."
+        }
+    }
+}
