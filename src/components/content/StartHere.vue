@@ -212,8 +212,56 @@ span {
   }
 }
 
+@media (width: 1192px) {
+  .custom-container-row-1 {
+    margin-top: 40px;
+  }
+
+  .image-container {
+    width: 400px;
+  }
+
+  .main-image {
+    max-width: 340px;
+    height: auto;
+    border-radius: 50px;
+  }
+
+  .icon-image {
+    position: absolute;
+    top: -4%;
+    right: 10px;
+    max-width: 380px;
+    height: auto;
+    z-index: 1;
+  }
+
+  .custom-info h2 {
+    font-size: 2.7rem;
+  }
+
+  .custom-container-row-2 {
+    /* display: none; */
+    height: 2%;
+    top: 18.3%;
+  }
+
+  .floating-icon-1 {
+    top: 16%;
+    left: 21%;
+    font-size: 110px !important;
+  }
+
+  .floating-icon-2 {
+    top: 19%;
+    left: 16%;
+    animation-direction: reverse;
+    font-size: 80px !important;
+  }
+}
+
 /* Media Query para telas maiores */
-@media (min-width: 1319px) {
+@media (min-width: 1299px) {
   .custom-container-row-1 {
     margin-top: 40px;
   }
@@ -238,30 +286,53 @@ span {
   }
 
   .custom-info h2 {
-    font-size: 3.8rem;
+    font-size: 3rem;
   }
 
   .custom-container-row-2 {
-    height: 3%;
-    top: 18.3%;
-  }
-
-  .custom-container-row-2 p {
-    padding: 20px;
-    font-size: 19px;
+    /* display: none; */
+    height: 2%;
+    top: 18% !important;
   }
 
   .floating-icon-1 {
-    top: 16%;
-    left: 21%;
-    font-size: 110px !important;
+    top: 16% !important;
+    left: 20.7% !important;
+    font-size: 80px !important;
   }
 
   .floating-icon-2 {
-    top: 19%;
-    left: 16%;
+    top: 18% !important;
+    left: 17% !important;
     animation-direction: reverse;
-    font-size: 80px !important;
+    font-size: 40px !important;
+  }
+}
+
+@media (height: 768px) {
+  
+  .custom-container-row-2 {
+    height: 65px;
+    top: 20.9% !important;
+    padding: 0;
+  }
+
+  .custom-container-row-2 p{
+    font-size: 0.8rem;
+    padding-top: 20px !important;
+    padding-left: 20px !important;
+  }
+
+  .floating-icon-1 {
+    top: 18.5% !important;
+    left: 19% !important;
+    font-size: 50px !important;
+  }
+
+  .floating-icon-2 {
+    top: 21% !important;
+    left: 15% !important;
+    font-size: 30px !important;
   }
 }
 </style>
