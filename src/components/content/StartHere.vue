@@ -8,7 +8,7 @@
         </h2>
         <h2>{{ $t(`${this.translatePath}.salutation.3`) }}<span>.</span></h2>
         <p>
-          {{ $t(`${this.translatePath}.salutation.4`) }}
+          <i>{{ $t(`${this.translatePath}.phrase`) }}</i>
         </p>
       </div>
       <div class="custom-buttons">
@@ -32,15 +32,6 @@
         <img src="../../assets/me.jpg" alt="Larissa Lavínia" class="main-image" />
       </div>
     </v-col>
-    <v-row class="custom-container-row-2">
-      <p>
-        <i>{{ $t(`${this.translatePath}.phrase`) }}</i>
-      </p>
-    </v-row>
-
-    <!-- Ícones flutuantes -->
-    <v-icon class="floating-icon floating-icon-1" icon="mdi-triangle" size="110" />
-    <v-icon class="floating-icon floating-icon-2" icon="mdi-triangle" size="74" />
   </v-row>
 </template>
 
@@ -62,12 +53,13 @@ export default {
 <style scoped>
 .custom-container-row {
   width: 80%;
-  min-height: calc(100vh - 97px);
+  min-height: 70vh;
   margin: auto;
   margin-top: 50px;
 }
 
 .custom-info {
+  max-height: 500px !important;
   padding: 0px 70px;
 }
 
@@ -113,66 +105,12 @@ span {
   z-index: 1;
 }
 
-.custom-container-row-2 {
-  width: 55%;
-  height: 2.7%;
-  background-color: var(--yellow);
-  position: absolute;
-  top: 18.5%;
-  left: 25%;
-  z-index: 2;
-  padding: 17px;
-  border-radius: 20px;
-}
-
-.custom-container-row-2 p {
-  padding: 5px;
+p {
+  padding: 15px;
   font-size: 14px;
-}
-
-/* Ícones flutuantes e giratórios */
-.floating-icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  opacity: 0.5;
-  animation: float 5s infinite, rotate 6s infinite linear;
-}
-
-.floating-icon-1 {
-  top: 16.3%;
-  left: 19%;
-  animation-direction: normal;
-  color: var(--red);
-  font-size: 70px !important;
-}
-
-.floating-icon-2 {
-  top: 18.5%;
-  left: 15%;
-  animation-direction: reverse;
-  font-size: 40px !important;
-}
-
-/* Animação de flutuação */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-/* Animação de rotação */
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  background-color: var(--yellow);
+  border-radius: 5px;
+  margin: 10px 0;
 }
 
 /* Media Query para mobile */
@@ -195,69 +133,6 @@ span {
     margin-left: 20px;
   }
 
-  .custom-container-row-2 {
-    width: 100%;
-    height: 18%;
-    position: static;
-    margin-top: 20px;
-  }
-
-  .custom-container-row-2 p {
-    font-size: 15px;
-    padding: 10px;
-  }
-
-  .floating-icon {
-    display: none; /* Ocultar ícones flutuantes em dispositivos móveis */
-  }
-}
-
-@media (width: 1192px) {
-  .custom-container-row-1 {
-    margin-top: 40px;
-  }
-
-  .image-container {
-    width: 400px;
-  }
-
-  .main-image {
-    max-width: 340px;
-    height: auto;
-    border-radius: 50px;
-  }
-
-  .icon-image {
-    position: absolute;
-    top: -4%;
-    right: 10px;
-    max-width: 380px;
-    height: auto;
-    z-index: 1;
-  }
-
-  .custom-info h2 {
-    font-size: 2.7rem;
-  }
-
-  .custom-container-row-2 {
-    /* display: none; */
-    height: 2%;
-    top: 18.3%;
-  }
-
-  .floating-icon-1 {
-    top: 16%;
-    left: 21%;
-    font-size: 110px !important;
-  }
-
-  .floating-icon-2 {
-    top: 19%;
-    left: 16%;
-    animation-direction: reverse;
-    font-size: 80px !important;
-  }
 }
 
 /* Media Query para telas maiores */
@@ -272,67 +147,17 @@ span {
 
   .main-image {
     max-width: 350px;
-    height: auto;
-    border-radius: 50px;
   }
 
   .icon-image {
-    position: absolute;
     top: -4%;
     right: 10px;
     max-width: 380px;
-    height: auto;
-    z-index: 1;
   }
 
   .custom-info h2 {
-    font-size: 3rem;
-  }
-
-  .custom-container-row-2 {
-    /* display: none; */
-    height: 2%;
-    top: 18% !important;
-  }
-
-  .floating-icon-1 {
-    top: 16% !important;
-    left: 20.7% !important;
-    font-size: 80px !important;
-  }
-
-  .floating-icon-2 {
-    top: 18% !important;
-    left: 17% !important;
-    animation-direction: reverse;
-    font-size: 40px !important;
+    font-size: 3.2rem;
   }
 }
 
-@media (height: 768px) {
-  
-  .custom-container-row-2 {
-    height: 65px;
-    top: 20.9% !important;
-    padding: 0;
-  }
-
-  .custom-container-row-2 p{
-    font-size: 0.8rem;
-    padding-top: 20px !important;
-    padding-left: 20px !important;
-  }
-
-  .floating-icon-1 {
-    top: 18.5% !important;
-    left: 19% !important;
-    font-size: 50px !important;
-  }
-
-  .floating-icon-2 {
-    top: 21% !important;
-    left: 15% !important;
-    font-size: 30px !important;
-  }
-}
 </style>

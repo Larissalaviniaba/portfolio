@@ -76,8 +76,9 @@ a {
 
 .custom-container-row {
   width: 80%;
-  min-height: calc(100vh - 97px);
+  min-height: 50vh;
   margin: auto;
+  margin-bottom: 70px;
 }
 
 .custom-col-info,
@@ -137,6 +138,13 @@ p {
   .image-container {
     margin-top: 40px;
     margin-left: 20px;
+  }
+
+  .main-image {
+    max-width: 260px;
+    height: auto;
+    border-radius: 50px;
+    margin-bottom: 20px;
   }
 }
 
