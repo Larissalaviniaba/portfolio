@@ -14,7 +14,7 @@
           <AboutMe />
         </section>
 
-        <section>
+        <section id="experienceAndEducation">
           <ExperienceAndEducation />
         </section>
 

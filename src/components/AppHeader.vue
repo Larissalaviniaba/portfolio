@@ -42,12 +42,15 @@ export default {
       return [
         {
           title: `${this.translatePath}.home`,
-
           href: "#",
         },
         {
           title: `${this.translatePath}.about`,
           href: "#about",
+        },
+        {
+          title: `${this.translatePath}.experienceAndEducation`,
+          href: "#experienceAndEducation",
         },
         {
           title: `${this.translatePath}.projects`,
