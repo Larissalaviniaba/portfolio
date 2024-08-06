@@ -14,6 +14,10 @@
           <AboutMe />
         </section>
 
+        <section>
+          <ExperienceAndEducation />
+        </section>
+
         <section id="projects">
           <MyProjects />
         </section>

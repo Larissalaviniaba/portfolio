@@ -115,10 +115,10 @@ span {
 
 .custom-container-row-2 {
   width: 55%;
-  height: 3%;
+  height: 2.8%;
   background-color: var(--yellow);
   position: absolute;
-  top: 21.8%;
+  top: 19%;
   left: 25%;
   z-index: 2;
   padding: 17px;
@@ -141,7 +141,7 @@ span {
 }
 
 .floating-icon-1 {
-  top: 18.6%;
+  top: 16.3%;
   left: 19%;
   animation-direction: normal;
   color: var(--red);
@@ -149,7 +149,7 @@ span {
 }
 
 .floating-icon-2 {
-  top: 21%;
+  top: 18.5%;
   left: 15%;
   animation-direction: reverse;
   font-size: 40px !important;
@@ -213,13 +213,28 @@ span {
 }
 
 /* Media Query para telas maiores */
-@media (min-width: 1400px) {
+@media (min-width: 1319px) {
   .custom-container-row-1 {
     margin-top: 40px;
   }
 
   .image-container {
-    margin-top: 28px;
+    width: 400px;
+  }
+
+  .main-image {
+    max-width: 350px;
+    height: auto;
+    border-radius: 50px;
+  }
+
+  .icon-image {
+    position: absolute;
+    top: -4%;
+    right: 10px;
+    max-width: 380px;
+    height: auto;
+    z-index: 1;
   }
 
   .custom-info h2 {
@@ -227,23 +242,23 @@ span {
   }
 
   .custom-container-row-2 {
-    height: 4%;
-    top: 21.8%;
+    height: 3%;
+    top: 18.3%;
   }
 
   .custom-container-row-2 p {
     padding: 20px;
-    font-size: 20px;
+    font-size: 19px;
   }
 
   .floating-icon-1 {
-    top: 19.8%;
+    top: 16%;
     left: 21%;
     font-size: 110px !important;
   }
 
   .floating-icon-2 {
-    top: 22%;
+    top: 19%;
     left: 16%;
     animation-direction: reverse;
     font-size: 80px !important;

@@ -1,4 +1,4 @@
-<template id="projects">
+<template>
   <v-sheet class="custom-container-sheet bg-background">
 
     <h2>{{ $t(`${this.translatePath}.title`) }}</h2>

@@ -78,7 +78,6 @@ a {
   width: 80%;
   min-height: calc(100vh - 97px);
   margin: auto;
-  /* margin-top: 20px; */
 }
 
 .custom-col-info,
