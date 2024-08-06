@@ -6,7 +6,7 @@
 
     <v-row class="custom-row-main">
       <v-main class="custom-container-main">
-        <section id="#">
+        <section id="startHere">
           <StartHere />
         </section>
 
@@ -38,6 +38,7 @@
 </script>
 
 <style scoped>
+
 .custom-row-header {
   height: 97px;
   flex: 0 0 auto;
@@ -61,6 +62,7 @@
 .custom-container-about {
   padding: 20px;
 }
+
 .custom-container-projects {
   min-height: calc(100vh - 400px);
 }

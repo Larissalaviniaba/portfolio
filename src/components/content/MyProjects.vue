@@ -81,8 +81,8 @@ export default {
 }
 
 h2 {
-  margin-bottom: 20px;
-  font-size: 2rem;
+  margin-bottom: 0px;
+  font-size: 1.7rem;
   text-transform: uppercase;
   color: var(--red);
 }
