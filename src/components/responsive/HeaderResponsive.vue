@@ -43,7 +43,7 @@ a {
 }
 
 .v-navigation-drawer {
-  width: 200px !important;
-  height: 190px !important;
+  width: 300px !important;
+  height: 250px !important;
 }
 </style>
